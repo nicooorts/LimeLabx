@@ -1,0 +1,15 @@
+class CreateMediaObjects < ActiveRecord::Migration
+  def self.up
+    create_table :media_objects do |t|
+      t.string :name
+      t.string :owner
+      t.text :restrictions
+
+      t.timestamps
+    end
+  end
+
+  def self.down
+    drop_table :media_objects
+  end
+end

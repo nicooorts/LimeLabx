@@ -1,0 +1,8 @@
+media_object:
+    - name: string
+    - owner: string
+    - restrictions: text
+    
+project:
+    - name: string
+    - has_many: [media_objects]

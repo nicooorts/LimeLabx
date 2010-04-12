@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+project_one:
+  id: <%= Fixtures.identify(:project_one) %>
+  name: Project1NameString
+
+project_two:
+  id: <%= Fixtures.identify(:project_two) %>
+  name: Project2NameString
+
+project_three:
+  id: <%= Fixtures.identify(:project_three) %>
+  name: Project3NameString
+
+project_four:
+  id: <%= Fixtures.identify(:project_four) %>
+  name: Project4NameString

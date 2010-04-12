@@ -1,0 +1,25 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+media_object_one:
+  id: <%= Fixtures.identify(:media_object_one) %>
+  name: MediaObject1NameString
+  owner: MediaObject1OwnerString
+  restrictions: MediaObject1RestrictionsText
+
+media_object_two:
+  id: <%= Fixtures.identify(:media_object_two) %>
+  name: MediaObject2NameString
+  owner: MediaObject2OwnerString
+  restrictions: MediaObject2RestrictionsText
+
+media_object_three:
+  id: <%= Fixtures.identify(:media_object_three) %>
+  name: MediaObject3NameString
+  owner: MediaObject3OwnerString
+  restrictions: MediaObject3RestrictionsText
+
+media_object_four:
+  id: <%= Fixtures.identify(:media_object_four) %>
+  name: MediaObject4NameString
+  owner: MediaObject4OwnerString
+  restrictions: MediaObject4RestrictionsText
