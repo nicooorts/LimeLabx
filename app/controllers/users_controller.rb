@@ -1,12 +1,24 @@
 class UsersController < ApplicationController
   # Be sure to include AuthenticationSystem in Application Controller instead
-  include AuthenticatedSystem
+  #include AuthenticatedSystem
   
 
   # render new.rhtml
   def new
   end
 
+  def create_xml
+    cookies.delete :auth_token
+    @user = User.new(params[:user])
+    @user.save
+    if @user.errors.empty?
+      self.current_user = @user
+      render :xml => @user.to_xml
+    else
+      render :text => "error"
+    end
+  end
+  
   def create
     cookies.delete :auth_token
     # protects against session fixation attacks, wreaks havoc with 

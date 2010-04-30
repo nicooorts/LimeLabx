@@ -4,8 +4,13 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :media_objects
   map.resources :projects
   
+  map.activate '/activate/:activation_code', :controller => 'users', :action => 'activate'
+  map.signup '/signup', :controller => 'users', :action => 'new'
+  map.login '/login', :controller => 'sessions', :action => 'new'
+  map.logout '/logout', :controller => 'sessions', :action => 'destroy'
+  
   # Map application root to default RestfulX controller
-  map.root :controller => "flex"
+  # map.root :controller => "flex"
   
   # The priority is based upon order of creation: first created -> highest priority.
 
